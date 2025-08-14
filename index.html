@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portofolio Gavin</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #00e5ff, #1200ff);
+      color: black;
+      line-height: 1.6;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 40px;
+      background-color: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(4px);
+    }
+
+    header img {
+      height: 50px;
+    }
+
+    nav a {
+      color: black;
+      text-decoration: none;
+      margin-left: 30px;
+      font-size: 18px;
+      font-weight: 500;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    nav a:hover {
+      color: white;
+      transform: scale(1.05);
+    }
+
+    /* Section umum */
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    section h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 2rem;
+      color: white;
+    }
+
+    /* Beranda (tanpa border & background) */
+    #home {
+      text-align: center;
+      color: white;
+      animation: fadeIn 1.2s ease-in-out;
+      background: none;
+      border: none;
+      box-shadow: none;
+    }
+
+    #home h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    #home h2 {
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+      font-weight: normal;
+    }
+
+    #home p {
+      font-size: 1rem;
+    }
+
+    /* Tentang Saya & Hobi */
+    .about {
+      background: rgba(255, 255, 255, 0.15);
+      padding: 40px;
+      border-radius: 15px;
+      color: white;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      border: 2px solid rgba(255, 255, 255, 0.4);
+      margin-bottom: 20px;
+    }
+
+    .about img {
+      width: 180px;
+      border-radius: 50%;
+      margin: 20px auto;
+      display: block;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .about img:hover {
+      transform: scale(1.08);
+    }
+
+    .about p {
+      text-align: left;
+    }
+
+    /* Karya */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .project-card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px) scale(1.03);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    }
+
+    .project-card h3 {
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+      color: #1200ff;
+    }
+
+    .project-card p {
+      font-size: 0.9rem;
+      color: #333;
+    }
+
+    /* Animasi */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      nav a { margin-left: 15px; font-size: 16px; }
+      #home h1 { font-size: 2rem; }
+      section { padding: 40px 15px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="IESCE.jpg" alt="Logo" />
+    <nav>
+      <a href="#home">Beranda</a>
+      <a href="#about">Tentang Saya</a>
+      <a href="#projects">Karya Saya</a>
+    </nav>
+  </header>
+
+  <!-- Beranda -->
+  <section id="home">
+    <h1>Axelle Gavin Syandana</h1>
+    <h2>Kelas XI-9</h2>
+    <p>Ekstra: Informatic Smasa Community</p>
+    <p>Alamat Rumah: JL Kendal Kramat Lawu 3</p>
+  </section>
+
+  <!-- Tentang Saya -->
+  <section id="about" class="about">
+    <h2>Tentang Saya</h2>
+    <img src="fotoku.jpg" alt="Foto Saya" />
+    <p>
+      Saya adalah pribadi yang bersemangat, kreatif, dan selalu berusaha memberikan yang terbaik dalam setiap usaha saya.
+    </p>
+  </section>
+
+  <!-- Hobi dan Bakat -->
+  <section class="about">
+    <h2>Hobi dan Bakat</h2>
+    <p>
+      <strong>Hobi:</strong> Renang dan jogging/running.<br>
+      <strong>Bakat:</strong> Fotografi dan cinematic.<br>
+      <strong>Divisi Dituju:</strong> Fotografi
+    </p>
+  </section>
+
+<section id="projects">  
+  <h2>Karya Saya</h2>  
+  <div class="projects">  
+
+    <!-- Infografis -->
+    <div class="project-card">  
+      <h3>Infografis</h3>  
+      <p>
+        <a href="https://drive.google.com/file/d/1ZVilmptqucDd7T6pqiXmAK95HpJRKFD-/view?usp=drivesdk" target="_blank" class="btn-link">📄 Lihat di Google Drive</a>
+      </p>
+    </div>  
+
+    <!-- Video Short Movie -->
+    <div class="project-card">  
+      <h3>Video Short Movie</h3>  
+      <p>
+        <a href="https://youtu.be/LFdZfHIbRDg?si=68EX7n016Odk26uD" target="_blank" class="btn-link">📺 Tonton di YouTube</a><br>
+        <a href="https://drive.google.com/drive/folders/1GSkE6KeBp21mc5c8FEJcRtdEIEb2O5xA" target="_blank" class="btn-link">📁 Tonton di Google Drive</a>
+      </p>
+    </div>
+    
+  </div>  
+</section>  
+
+<style>
+  /* Gaya untuk seluruh section Karya Saya */
+  #projects {
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1e90ff, #3349ff);
+    border-radius: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    color: white;
+    margin: 20px auto;
+    max-width: 900px; /* Biar nyaman di layar besar */
+  }
+
+  #projects h2 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+  }
+
+  .projects {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .project-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    width: 100%;
+    max-width: 280px;
+    padding: 15px;
+    color: black;
+    text-align: center;
+  }
+
+  .project-card h3 {
+    margin: 0 0 10px;
+    font-size: 1.2rem;
+  }
+
+  .btn-link {
+    display: inline-block;
+    padding: 8px 12px;
+    margin-top: 5px;
+    background: #007BFF;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+    font-size: 0.9rem;
+  }
+
+  .btn-link:hover {
+    background: #0056b3;
+  }
+
+  /* Responsif untuk HP */
+  @media (max-width: 600px) {
+    #projects {
+      padding: 15px;
+    }
+
+    #projects h2 {
+      font-size: 1.5rem;
+    }
+
+    .projects {
+      gap: 15px;
+    }
+
+    .project-card {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .btn-link {
+      font-size: 0.85rem;
+      padding: 7px 10px;
+    }
+  }
+</style>
+
+<!-- Bagian Hubungi via WhatsApp -->
+<div class="whatsapp-container">
+  <a href="https://wa.me/6289517249275" target="_blank" class="whatsapp-btn">
+    💬 Hubungi Saya via WhatsApp
+  </a>
+</div>
+
+<style>
+  /* Container */
+  .whatsapp-container {
+    background: white;
+    border: 3px solid #25D366;
+    border-radius: 15px;
+    padding: 15px;
+    margin: 20px auto;
+    text-align: center;
+    max-width: 600px; /* Supaya tidak terlalu lebar di layar besar */
+    animation: fadeUp 0.6s ease-out;
+  }
+
+  /* Tombol */
+  .whatsapp-btn {
+    display: inline-block;
+    background-color: #25D366;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-size: clamp(14px, 2.5vw, 18px); /* Ukuran font responsif */
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  /* Hover */
+  .whatsapp-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(37, 211, 102, 0.6);
+  }
+
+  /* Klik */
+  .whatsapp-btn:active {
+    transform: scale(0.95);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  }
+
+  /* Animasi masuk */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+
+</body>
+</html>
