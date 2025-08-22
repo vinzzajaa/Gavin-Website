@@ -375,10 +375,12 @@
 
   .emoji {
     position: absolute;
-    bottom: -50px;
+    bottom: -10vh;
     font-size: 2rem;
     opacity: 0.9;
     animation: riseEmoji linear forwards;
+    will-change: transform, opacity;
+    user-select: none;
   }
 
   @keyframes riseEmoji {
@@ -393,16 +395,30 @@
   window.addEventListener("load", () => {
     const container = document.querySelector(".emoji-container");
 
-    for (let i = 0; i < 40; i++) { // jumlah emoji
+    // Sesuaikan jumlah emoji berdasarkan ukuran layar
+    const screenWidth = window.innerWidth;
+    let count = 30; // default
+
+    if (screenWidth < 500) count = 20;   // HP kecil
+    else if (screenWidth > 1200) count = 40; // layar besar
+
+    for (let i = 0; i < count; i++) {
       const e = document.createElement("div");
       e.classList.add("emoji");
-      e.textContent = "🥶"; 
+      e.textContent = "🥶";
 
-      const size = Math.random() * 30 + 20; // ukuran acak
-      e.style.fontSize = size + "px";
-      e.style.left = Math.random() * 100 + "vw"; // posisi acak
-      e.style.animationDuration = (Math.random() * 3 + 3) + "s"; // 3–6 detik
-      e.style.animationDelay = Math.random() * 1 + "s"; // delay acak
+      // ukuran relatif ke layar
+      const size = Math.random() * 2 + 1.5; // 1.5–3 rem
+      e.style.fontSize = size + "rem";
+
+      // posisi horizontal acak
+      e.style.left = Math.random() * 100 + "vw";
+
+      // kecepatan animasi acak (4–7s)
+      e.style.animationDuration = (Math.random() * 3 + 4) + "s";
+
+      // delay sedikit biar muncul tidak barengan
+      e.style.animationDelay = Math.random() * 1.5 + "s";
 
       container.appendChild(e);
 
@@ -410,10 +426,10 @@
       e.addEventListener("animationend", () => e.remove());
     }
 
-    // hapus container setelah selesai semua
-    setTimeout(() => container.remove(), 7000);
+    // hapus container setelah selesai
+    setTimeout(() => container.remove(), 8000);
   });
-        </script>
-  
+</script>
+
 </body>
 </html>
