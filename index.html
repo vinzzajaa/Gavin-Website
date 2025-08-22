@@ -361,5 +361,59 @@
   }
 </style>
 
+<!-- Efek Emoji 🥶 saat membuka website -->
+<div class="emoji-container"></div>
+
+<style>
+  .emoji-container {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 9999;
+  }
+
+  .emoji {
+    position: absolute;
+    bottom: -50px;
+    font-size: 2rem;
+    opacity: 0.9;
+    animation: riseEmoji linear forwards;
+  }
+
+  @keyframes riseEmoji {
+    0%   { transform: translateY(0) scale(0.5); opacity: 0; }
+    20%  { opacity: 1; }
+    80%  { opacity: 1; }
+    100% { transform: translateY(-120vh) scale(1.2); opacity: 0; }
+  }
+</style>
+
+<script>
+  window.addEventListener("load", () => {
+    const container = document.querySelector(".emoji-container");
+
+    for (let i = 0; i < 40; i++) { // jumlah emoji
+      const e = document.createElement("div");
+      e.classList.add("emoji");
+      e.textContent = "🥶"; 
+
+      const size = Math.random() * 30 + 20; // ukuran acak
+      e.style.fontSize = size + "px";
+      e.style.left = Math.random() * 100 + "vw"; // posisi acak
+      e.style.animationDuration = (Math.random() * 3 + 3) + "s"; // 3–6 detik
+      e.style.animationDelay = Math.random() * 1 + "s"; // delay acak
+
+      container.appendChild(e);
+
+      // hapus setelah animasi selesai
+      e.addEventListener("animationend", () => e.remove());
+    }
+
+    // hapus container setelah selesai semua
+    setTimeout(() => container.remove(), 7000);
+  });
+        </script>
+  
 </body>
 </html>
